@@ -1,11 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Weathe application</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+    <div class="weather-app">
+        <div class="container">
+            <h3 class="brand ">The weather application</h3>
+            <div>
+                <h1 class="temp">16&#176;</h1>
+                <div class="city-time">
+                    <h1 class="name">London</h1>
+                    <small>
+                        <span class="time">06:09</span>
+
+                        <span class="date">
+                            Monday Sep 19
+                        </span>
+                    </small>
+                </div>
+                <div class="weather">
+                    <img src="icons/Day/cloud.png" class="icon" alt="icon" width="50" height="50">
+                </div>
+                <div>
+                    <button type="Forcast" class=" btn btn-info Forcastdata forcast "
+                        onclick="ForcastPage()">Forcast Data and Historical data </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel">
+            <form class="locationInput">
+                <input type="text" class="search" placeholder="Search Location...">
+                <button type="button" id="submit" class="submit" onclick="handleSearch()">
+                    <i class="fas fa-search"></i>
+                    <img src="icons/Day/search icon.png" width="50" height="50" alt="">
+                </button>
+            </form>
+            <ul class="cities">
+                <li class="city">New york</li>
+                <li class="city">michigan</li>
+                <li class="city">Paris</li>
+                <li class="city">Tokio</li>
+            </ul>
+            <ul class="details">
+                <h4>Real-time Weather Details</h4>
+
+                <li>
+                    <span>Cloudy</span>
+                    <span class="cloud">89%</span>
+                </li>
+                <li>
+                    <span>Humidity</span>
+                    <span class="humidity">64%</span>
+                </li>
+                <li>
+                    <span>Wind</span>
+                    <span class="wind">8km/h</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="main.js"></script>
 </body>
+
 </html>
